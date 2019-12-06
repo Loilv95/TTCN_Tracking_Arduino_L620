@@ -54,7 +54,7 @@ void setup()
   pinMode (PWR_KEY, OUTPUT);
   pinMode (RESET_KEY, OUTPUT);
   //Reset and Turn on module sim L620
-RST_L620:
+RST_L620:            
   init_BC66();
   //Close MQTT
   sendATcommand("AT+EMQDISCON=0", "OK", 2000);
