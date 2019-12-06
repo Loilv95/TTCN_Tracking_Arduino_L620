@@ -72,6 +72,7 @@ RST_L620:
 
 void loop()
 {
+//#if 0
   bool newData = false;
   while (Serial.available()) {
     char c = Serial.read();
@@ -79,7 +80,8 @@ void loop()
     if (gps.encode(c)) // Did a new valid sentence come in?
       newData = true;
   }
-  
+//#endif
+//  bool newData = true;  
   if (newData ) {
     float flat, flon;
     char flat_str[15], flon_str[15];
