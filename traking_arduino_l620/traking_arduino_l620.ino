@@ -175,13 +175,13 @@ void init_BC66()
   //Check Network status
   //Wait 1,5s
   //Check network in three minutes
-  for (i = 0; i < 18; i++) {
+  for (i = 0; i < 36; i++) {
     if (sendATcommand(NETWORK_STATUS, "+CEREG: 0,1", 1000)) {
       break;
     }
     delay (5000);
   }
-  if (i == 18) {
+  if (i == 36) {
     init_BC66();
   }
   return;
